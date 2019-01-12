@@ -4,6 +4,7 @@ import cn.mesmile.aigou.domain.Employee;
 import cn.mesmile.aigou.util.AjaxResult;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,14 +22,14 @@ public class LoginController {
      * @param employee
      * @return
      */
-    @RequestMapping("/login")
+    @RequestMapping(value = "/login",method = RequestMethod.POST)
     public AjaxResult login(@RequestBody Employee employee){
 
         if(employee == null){
             return AjaxResult.success().setSuccess(false).setMessage("网络发送故障，请联系管理员！");
         }
         // 匹配用户名和密码
-        if("admin".equals(employee.getUsername()) && "admin".equals(employee.getPassword())){
+        if("admin".equals(employee.getUsername()) && "123456".equals(employee.getPassword())){
             return AjaxResult.success().setMessage("登陆成功");
         }
         return AjaxResult.success().setSuccess(false).setMessage("用户名或者密码错误！");
