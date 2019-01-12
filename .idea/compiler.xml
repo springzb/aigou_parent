@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="aigou_plat_service" />
         <module name="basic_util" />
+        <module name="config_server_4399" />
         <module name="eureka_server" />
         <module name="eureka_server_7001" />
         <module name="plat_interface" />
@@ -23,6 +24,7 @@
       <module name="aigou_plat_service" target="1.8" />
       <module name="basic_parent" target="1.8" />
       <module name="basic_util" target="1.8" />
+      <module name="config_server_4399" target="1.8" />
       <module name="eureka_server" target="1.8" />
       <module name="eureka_server_7001" target="1.8" />
       <module name="plat_interface" target="1.8" />
